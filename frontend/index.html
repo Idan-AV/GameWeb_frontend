@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Store</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <button id="loginBtn" onclick="window.location.href='login.html'">Login</button>
+        <button id="loanedGamesBtn" onclick="viewLoanedGames()" style="display: none;">Loaned Games</button>
+        <button id="logoutBtn" onclick="logout()" style="display: none;">Logout</button>
+    </header>
+    <div class="games-container" id="gamesList"></div>
+    <script src="home.js"></script>
+</body>
+</html>
