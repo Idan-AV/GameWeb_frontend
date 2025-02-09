@@ -30,7 +30,7 @@ function checkLogin() {
     const user = JSON.parse(localStorage.getItem("user"));
     if (user) {
         alert(`Welcome back, ${user.name}!`);
-        window.location.href = "dashboard.html"; // Redirect if already logged in
+        window.location.href = "index.html"; // Redirect if already logged in
     }
 }
 

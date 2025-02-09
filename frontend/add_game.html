@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Add a New Game</h2>
+        <input type="text" id="game-title" placeholder="Game Title">
+        <input type="text" id="game-genre" placeholder="Genre">
+        <input type="number" id="game-price" placeholder="Price">
+        <input type="number" id="game-quantity" placeholder="Quantity">
+        <button onclick="addGame()">Add Game</button>
+        <button class="back-btn" onclick="window.location.href='home.html'">Back to Home</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>  <!-- Add this line -->
+    <script src="add_game.js"></script>
+</body>
+</html>
