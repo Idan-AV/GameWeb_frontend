@@ -4,8 +4,10 @@ document.addEventListener("DOMContentLoaded", () => {
     
     const registerBtn = document.getElementById("registerBtn");
     const loginBtn = document.getElementById("loginBtn");
-    const loanedGamesBtn = document.getElementById("loanedGamesBtn");
+    const loanedGamesBtn = document.getElementById("loanedGamesBtn");//for admin to see al the loans
     const logoutBtn = document.getElementById("logoutBtn");
+    const loan_a_GameBtn = document.getElementById("loanGameBtn");//for customer to loan
+
     const addGameBtn = document.getElementById("addGameBtn"); // Get the Add Game button
 
     if (user) {
@@ -18,6 +20,11 @@ document.addEventListener("DOMContentLoaded", () => {
         // If user is an admin (role = 1), show Add Game button
         if (user.role === 1) {
             addGameBtn.style.display = "inline-block";
+
+        }
+        else{
+            loan_a_GameBtn.style.display = "inline-block";
+
         }
     } else {
         // If user is not logged in, show Register and Login, hide Loaned Games, Logout, and Add Game
@@ -26,6 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
         loanedGamesBtn.style.display = "none";
         logoutBtn.style.display = "none";
         addGameBtn.style.display = "none";
+        
     }
 });
 
@@ -34,9 +42,7 @@ function logout() {
     window.location.reload();
 }
 
-function viewLoanedGames() {
-    window.location.href = "loaned_games.html"; // Update with actual loaned games page
-}
+
 
 
 
@@ -66,5 +72,5 @@ async function getGames() {
 
 
 
-// Load all books when page loads
+// Load all games when page loads
 document.addEventListener('DOMContentLoaded', getGames);
